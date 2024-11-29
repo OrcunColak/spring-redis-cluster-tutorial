@@ -4,5 +4,4 @@ spring:
       cluster:
         nodes:
           - localhost:6379
-          - localhost:6380
-          - localhost:6381
+        ssl : false

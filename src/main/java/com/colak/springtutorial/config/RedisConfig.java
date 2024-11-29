@@ -15,11 +15,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @RequiredArgsConstructor
 public class RedisConfig {
 
-    @Bean
-    public RedisClusterConfiguration customRedisCluster(RedisProperties redisProperties) {
-        return new RedisClusterConfiguration(redisProperties.getCluster().getNodes());
-    }
-
     // RedisConnectionFactory is an interface. The passed in object type is LettuceConnectionFactory
     @Bean
     public RedisTemplate<String, Product> redisProductTemplate(RedisConnectionFactory redisConnectionFactory) {
